@@ -59,11 +59,11 @@ I am currently an MSc student in the Department of Electronic and Electrical Eng
 
   
 ## News
-* [Mar. 2021] I have received several job offers from Alibaba, Baidu, Bytedance, Huawei and Momenta. Thanks!
+* [Mar. 2021] I have received several job offers from Alibaba, Baidu, Bytedance, Huawei, Momenta, etc. Thanks!
 * [Feb. 2021] I start working as a Research Assistant in the Department of Informatics, King's College London.
 * [Dec. 2020] My graduation thesis of bachelor degree has been awarded as **'Excellent Graduation Thesis in Beijing'**!
 * [Aug. 2020] I am awarded as **PPDE (PaddlePaddle Developer Expert)** by Baidu. Thanks!
-* [Jun. 2020] I received B.E. degree from Beijing Jiaotong University.  
+* [Jun. 2020] I have received B.E. degree from Beijing Jiaotong University.  
 
 
 
