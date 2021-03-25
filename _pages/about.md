@@ -14,10 +14,12 @@ I am currently an MSc student in the Department of Electronic and Electrical Eng
 
 ## Education
 * [**University College London**](https://www.ucl.ac.uk/)  Department of Electronic and Electrical Engineering  
+  Integrated Machine Learning System  
   Master of Science  
   Sep. 2020 - Sep. 2021
   
 * [**Beijing Jiaotong University**](http://en.bjtu.edu.cn/)  School of Software Engineering  
+  Software Engineering  
   Bachelor of Engineering  
   Sep. 2016 - Jun. 2020
 
@@ -61,7 +63,7 @@ I am currently an MSc student in the Department of Electronic and Electrical Eng
 * [Feb. 2021] I start working as a Research Assistant in the Department of Informatics, King's College London.
 * [Dec. 2020] My graduation thesis of bachelor degree has been awarded as **'Excellent Graduation Thesis in Beijing'**!
 * [Aug. 2020] I am awarded as **PPDE (PaddlePaddle Developer Expert)** by Baidu. Thanks!
-* [Jun. 2020] I received B.E. degree from Beijing Jiaotong University.
+* [Jun. 2020] I received B.E. degree from Beijing Jiaotong University.  
 
 
 
