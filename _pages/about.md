@@ -63,5 +63,7 @@ I am currently an MSc student in the Department of Electronic and Electrical Eng
 * [Aug. 2020] I am awarded as **PPDE (PaddlePaddle Developer Expert)** by Baidu. Thanks!
 * [Jun. 2020] I received B.E. degree from Beijing Jiaotong University.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=ru2lEa45xfHWP8l5jK0mBHVRxhxCPXqPODLM6rcxYTE"></script>
+
+
+
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=ru2lEa45xfHWP8l5jK0mBHVRxhxCPXqPODLM6rcxYTE&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
