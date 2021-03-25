@@ -64,7 +64,8 @@ I am currently an MSc student in the Department of Electronic and Electrical Eng
 * [Dec. 2020] My graduation thesis of bachelor degree has been awarded as **'Excellent Graduation Thesis in Beijing'**!
 * [Aug. 2020] I am awarded as **PPDE (PaddlePaddle Developer Expert)** by Baidu. Thanks!
 * [Jun. 2020] I have received B.E. degree from Beijing Jiaotong University.  
-
-
-
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=350&t=tt&d=ru2lEa45xfHWP8l5jK0mBHVRxhxCPXqPODLM6rcxYTE&co=38434a&cmn=5e7dff&cmo=f06e6e'></script>
+  
+  
+  
+  
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=350&t=tt&d=ru2lEa45xfHWP8l5jK0mBHVRxhxCPXqPODLM6rcxYTE&co=ffffff&cmn=4064f8&cmo=f57272&ct=808080'></script>
