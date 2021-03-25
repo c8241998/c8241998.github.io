@@ -65,5 +65,4 @@ I am currently an MSc student in the Department of Electronic and Electrical Eng
 
 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=ru2lEa45xfHWP8l5jK0mBHVRxhxCPXqPODLM6rcxYTE&co=2d78ad&cmo=3acc3a&cmn=ff5353&ct=ffffff'></script>
+<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=350&t=n&d=ru2lEa45xfHWP8l5jK0mBHVRxhxCPXqPODLM6rcxYTE'></script>
