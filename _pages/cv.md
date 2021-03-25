@@ -14,5 +14,5 @@ redirect_from:
 
 English Version
 ======
-[**link**](https://c8241998.github.io/files/Zedong Chu.pdf)
+[**link**](https://c8241998.github.io/files/ZedongChu.pdf)
 
