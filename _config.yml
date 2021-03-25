@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Zedong Chu"
 title_separator          : "-"
 name                     : &name "Zedong Chu (储泽栋)"
-description              : &description "MSc @ University College London"
+description              : &description "MSc @ UCL\nBEng @ BJTU"
 url                      : https://c8241998.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "c8241998/c8241998.github.io"
@@ -94,15 +94,15 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : "https://www.facebook.com/profile.php?id=100006985786492"
+  facebook         : "100006985786492"
   foursquare       :
-  github           : "https://github.com/c8241998"
+  github           : "c8241998"
   google_plus      :
   keybase          :
-  instagram        : "https://www.instagram.com/c8241998/"
+  instagram        : "c8241998"
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "https://www.linkedin.com/in/zedong-chu-362a851b6/"
+  linkedin         : "zedong-chu-362a851b6"
   orcid            : 
   pinterest        :
   soundcloud       :
