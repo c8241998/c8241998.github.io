@@ -10,7 +10,7 @@ redirect_from:
 
 中文版本
 ======
-[**link**](https://c8241998.github.io/files/储泽栋简历.pdf)
+[**link**](https://c8241998.github.io/files/储泽栋.pdf)
 
 English Version
 ======
