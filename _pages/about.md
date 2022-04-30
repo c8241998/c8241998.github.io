@@ -25,7 +25,7 @@ I am currently an MSc student in the Department of Electronic and Electrical Eng
 
 ## Professional Experience
 * [**King's College London**](https://www.kcl.ac.uk/) *Research Assistant*  
-  Feb. 2021 - now  
+  Feb. 2021 - Dec. 2021  
   Project: Remote sensing and machine learning to detect global dams and associated reservoirs  
   Working with [Dr. Miaojing Shi](https://sites.google.com/site/miaojingshi), [Dr. Arnout van Soesbergen](https://www.kcl.ac.uk/people/arnout-van-soesbergen) and [Dr. Mark Mulligan](https://www.kcl.ac.uk/people/mark-mulligan).
 
@@ -43,10 +43,13 @@ I am currently an MSc student in the Department of Electronic and Electrical Eng
   Back-end development of urban data lake online storage platform.
  
 ## Professional Services
+* [Dec. 2021] Serve as the emergency reviewer of CVPR 2022.
 * [Aug. 2020] Serve as the reviewer of [the 15th National University Students intelligent Car Race](https://smartcar.cdstm.cn/index).
 
 ## Publications
 
+* **Zedong C**, Van Soesbergen A, Shi M, Mulligan M. Dam reservoir extraction from remote sensing imagery using tailored metric learning strategies. IEEE TRANSACTIONS ON GEOSCIENCE AND REMOTE SENSING. 2022 Apr 25.
+* Chen J, **Chu Z**, Zhao R, et al. Output prediction of alpha-type Stirling engines using gradient boosted regression trees and corresponding heat recovery system optimization based on improved NSGA-II[J]. Energy Reports, 2022, 8: 835-846. [[paper]](https://www.sciencedirect.com/science/article/pii/S2352484722004693)
 * Lin, Beibei, Shunli Zhang, Xin Yu, **Zedong Chu**, and Haikun Zhang. "Learning Effective Representations from Global and Local Features for Cross-View Gait Recognition." arXiv preprint arXiv:2011.01461 (2020).  [[paper]](https://arxiv.org/pdf/2011.01461.pdf)
 
 ## Honor and Awards
@@ -59,6 +62,9 @@ I am currently an MSc student in the Department of Electronic and Electrical Eng
 
   
 ## News
+* [May. 2021] I start working as an algorithm engineer at Alibaba.
+* [Apr. 2021] One paper is accepted for publication by **IEEE TRANSACTIONS ON GEOSCIENCE AND REMOTE SENSING (TGRS)**.
+* [Mar. 2021] One paper is accepted for publication by **Energy Reports**.
 * [Sep. 2021] One paper is accepted for oral presentation and publication by **ICPE 2021**-The 2nd International Conference on Power Engineering.
 * [Mar. 2021] I receive several job offers from Alibaba, Baidu, Bytedance, Huawei, Momenta, etc.
 * [Feb. 2021] I start working as a Research Assistant in the Department of Informatics, King's College London.
