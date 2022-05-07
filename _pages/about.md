@@ -62,9 +62,10 @@ I am currently an MSc student in the Department of Electronic and Electrical Eng
 
   
 ## News
-* [May. 2021] I start working as an algorithm engineer at Alibaba.
-* [Apr. 2021] One paper is accepted for publication by **IEEE TRANSACTIONS ON GEOSCIENCE AND REMOTE SENSING (TGRS)**.
-* [Mar. 2021] One paper is accepted for publication by **Energy Reports**.
+* [May. 2022] I start working as an algorithm engineer at Alibaba.
+* [Apr. 2022] One paper is accepted for publication by **IEEE TRANSACTIONS ON GEOSCIENCE AND REMOTE SENSING (TGRS)**.
+* [Mar. 2022] One paper is accepted for publication by **Energy Reports**.
+* [Dec. 2021] I receive Msc degree from University College London. 
 * [Sep. 2021] One paper is accepted for oral presentation and publication by **ICPE 2021**-The 2nd International Conference on Power Engineering.
 * [Mar. 2021] I receive several job offers from Alibaba, Baidu, Bytedance, Huawei, Momenta, etc.
 * [Feb. 2021] I start working as a Research Assistant in the Department of Informatics, King's College London.
