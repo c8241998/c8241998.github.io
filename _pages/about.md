@@ -22,6 +22,11 @@ I am currently working as an Algorithm Expert at Alibaba's Amap in Beijing, Chin
   Sep. 2016 - Jun. 2020
 
 ## Professional Experience
+
+* [**Alibaba AMAP**](https://www.alibabagroup.com/) *Algorithm Expert*  
+  May. 2022 - now  
+  Research on vision-language-model, digital human, digital twin, navigation.
+  
 * [**King's College London**](https://www.kcl.ac.uk/) *Research Assistant*  
   Feb. 2021 - Dec. 2021  
   Project: Remote sensing and machine learning to detect global dams and associated reservoirs  
@@ -39,13 +44,13 @@ I am currently working as an Algorithm Expert at Alibaba's Amap in Beijing, Chin
 ## News
 
 * [Apr. 2025] One paper is accepted for highlight presentation by **CVPR 2025**.
-* [Mar. 2025] I start working as an algorithm expert at Alibaba.
-* [Mar. 2024] I start working as an senior algorithm engineer at Alibaba.
+* [Mar. 2025] Promoted to become an algorithm expert at Alibaba.
+* [Mar. 2024] Promoted to become a senior algorithm engineer at Alibaba.
 * [May. 2022] I start working as an algorithm engineer at Alibaba.
 * [Apr. 2022] One paper is accepted for publication by **IEEE TRANSACTIONS ON GEOSCIENCE AND REMOTE SENSING (TGRS)**.
 * [Mar. 2022] One paper is accepted for publication by **Energy Reports**.
 * [Dec. 2021] I receive Msc degree from University College London. 
-* [Sep. 2021] One paper is accepted for oral presentation and publication by **ICPE 2021**-The 2nd International Conference on Power Engineering.
+* [Sep. 2021] One paper is accepted for oral presentation and publication by **ICPE 2021**
 * [Mar. 2021] I receive several job offers from Alibaba, Baidu, Bytedance, Huawei, Momenta, etc.
 * [Feb. 2021] I start working as a Research Assistant in the Department of Informatics, King's College London.
 * [Dec. 2020] My graduation thesis of bachelor degree is awarded as **'Excellent Graduation Thesis in Beijing'**.
