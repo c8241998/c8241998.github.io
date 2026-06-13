@@ -7,7 +7,7 @@
     <meta name="description" content="Zedong Chu's academic homepage. Algorithm Expert at Alibaba AMAP, researching Embodied AI, Digital Human, and Digital Twin.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+SC:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
@@ -24,6 +24,13 @@
             --shadow: 0 4px 16px rgba(0,0,0,0.07);
             --shadow-lg: 0 8px 30px rgba(0,0,0,0.1);
             --radius: 10px;
+            --font-heading: 'Crimson Text', Georgia, serif;
+            --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        html[lang="zh"] {
+            --font-heading: 'Noto Serif SC', 'Crimson Text', '宋体', serif;
+            --font-body: 'Noto Sans SC', 'Source Sans 3', '微软雅黑', sans-serif;
         }
 
         * {
@@ -37,7 +44,7 @@
         }
 
         body {
-            font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
             color: var(--text);
             background: var(--bg);
             line-height: 1.7;
@@ -78,10 +85,16 @@
         }
 
         header .site-name {
-            font-family: 'Crimson Text', Georgia, serif;
+            font-family: var(--font-heading);
             font-size: 1.4rem;
             font-weight: 700;
             letter-spacing: 0.5px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         nav a {
@@ -122,6 +135,47 @@
             color: #fff;
             font-size: 1.4rem;
             cursor: pointer;
+        }
+
+        /* ── Language Toggle ── */
+        .lang-toggle {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 20px;
+            padding: 0;
+            cursor: pointer;
+            font-size: 0.82rem;
+            font-weight: 500;
+            overflow: hidden;
+            margin-left: 20px;
+            transition: background 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .lang-toggle:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .lang-toggle span {
+            padding: 5px 12px;
+            color: rgba(255,255,255,0.6);
+            transition: all 0.25s ease;
+            line-height: 1;
+        }
+
+        .lang-toggle span.active {
+            background: rgba(255,255,255,0.22);
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .lang-toggle .sep {
+            padding: 0;
+            width: 1px;
+            height: 18px;
+            background: rgba(255,255,255,0.2);
         }
 
         /* ── Profile Section ── */
@@ -180,7 +234,7 @@
         }
 
         .profile-info h1 {
-            font-family: 'Crimson Text', Georgia, serif;
+            font-family: var(--font-heading);
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--primary);
@@ -230,7 +284,7 @@
         }
 
         .section-title {
-            font-family: 'Crimson Text', Georgia, serif;
+            font-family: var(--font-heading);
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary);
@@ -552,6 +606,10 @@
             nav a { margin-left: 0; font-size: 1rem; }
             nav a::after { display: none; }
 
+            .lang-toggle {
+                margin-left: 0;
+            }
+
             .news-list li { flex-direction: column; gap: 2px; }
             .news-date { min-width: unset; }
 
@@ -566,15 +624,22 @@
 <header>
     <div class="container">
         <span class="site-name">Zedong Chu</span>
-        <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')" aria-label="Toggle menu">
-            <i class="fas fa-bars"></i>
-        </button>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#news">News</a>
-            <a href="#experience">Experience</a>
-            <a href="#publications">Publications</a>
-        </nav>
+        <div class="header-right">
+            <button class="menu-toggle" onclick="document.querySelector('nav').classList.toggle('active')" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#news" data-i18n="nav.news">News</a>
+                <a href="#experience" data-i18n="nav.experience">Experience</a>
+                <a href="#publications" data-i18n="nav.publications">Publications</a>
+            </nav>
+            <button class="lang-toggle" onclick="toggleLang()" aria-label="Toggle language">
+                <span id="lang-en" class="active">EN</span>
+                <span class="sep"></span>
+                <span id="lang-zh">中文</span>
+            </button>
+        </div>
     </div>
 </header>
 
@@ -593,9 +658,9 @@
             </div>
             <div class="profile-info">
                 <h1>Zedong Chu <span style="font-size:1.1rem; font-weight:400; color:var(--text-light);">/ 储泽栋</span></h1>
-                <div class="title">Algorithm Expert</div>
-                <div class="affiliation"><a href="https://amap-cvlab.github.io/" target="_blank">CV Lab, Alibaba AMAP</a>, Beijing, China</div>
-                <div class="bio">
+                <div class="title" data-i18n="profile.title">Algorithm Expert</div>
+                <div class="affiliation" data-i18n-html="profile.affiliation"><a href="https://amap-cvlab.github.io/" target="_blank">CV Lab, Alibaba AMAP</a>, Beijing, China</div>
+                <div class="bio" data-i18n-html="profile.bio">
                     I am currently working as an Algorithm Expert at Alibaba's Amap in Beijing, China.
                     Prior to this role, I completed my Master of Science degree in the Department of Electronic and Electrical Engineering
                     at University College London (UCL), UK, where I was supervised by
@@ -605,10 +670,10 @@
                     <a href="https://faculty.bjtu.edu.cn/rjxy/8947.html" target="_blank">Dr. Shunli Zhang</a>.
                 </div>
                 <div class="research-interests">
-                    <span>Embodied AI</span>
-                    <span>Foundation Model</span>
-                    <span>Digital Human</span>
-                    <span>Computer Vision</span>
+                    <span data-i18n="interest.embodied">Embodied AI</span>
+                    <span data-i18n="interest.foundation">Foundation Model</span>
+                    <span data-i18n="interest.human">Digital Human</span>
+                    <span data-i18n="interest.cv">Computer Vision</span>
                 </div>
             </div>
         </div>
@@ -618,71 +683,71 @@
 <!-- News -->
 <section id="news" class="section news-section">
     <div class="container">
-        <h2 class="section-title">News</h2>
+        <h2 class="section-title" data-i18n="section.news">News</h2>
         <ul class="news-list">
             <li>
                 <span class="news-date">[Jun. 2026]</span>
-                <span class="news-content"><a href="https://amap-eai.github.io/SocialNav/" target="_blank"><span class="highlight">SocialNav</span></a> is selected as a <strong>Best Paper Candidate</strong> at CVPR 2026!</span>
+                <span class="news-content" data-i18n-html="news.1"><a href="https://amap-eai.github.io/SocialNav/" target="_blank"><span class="highlight">SocialNav</span></a> is selected as a <strong>Best Paper Candidate</strong> at CVPR 2026!</span>
             </li>
             <li>
                 <span class="news-date">[Feb. 2026]</span>
-                <span class="news-content">Two papers (<a href="https://amap-eai.github.io/SocialNav/" target="_blank">SocialNav</a>, <a href="https://arxiv.org/abs/2512.01550" target="_blank">NavForesee</a>) are accepted by <strong>CVPR 2026</strong>.</span>
+                <span class="news-content" data-i18n-html="news.2">Two papers (<a href="https://amap-eai.github.io/SocialNav/" target="_blank">SocialNav</a>, <a href="https://arxiv.org/abs/2512.01550" target="_blank">NavForesee</a>) are accepted by <strong>CVPR 2026</strong>.</span>
             </li>
             <li>
                 <span class="news-date">[Feb. 2026]</span>
-                <span class="news-content">Technical report of our navigation foundation model <a href="https://amap-cvlab.github.io/ABot-Navigation/ABot-N0/" target="_blank"><strong>ABot-N0</strong></a> is released.</span>
+                <span class="news-content" data-i18n-html="news.3">Technical report of our navigation foundation model <a href="https://amap-cvlab.github.io/ABot-Navigation/ABot-N0/" target="_blank"><strong>ABot-N0</strong></a> is released.</span>
             </li>
             <li>
                 <span class="news-date">[Jan. 2026]</span>
-                <span class="news-content">Two papers (<a href="https://astra-amap.github.io/omninav.github.io/" target="_blank">OmniNav</a>, <a href="https://ce-nav.github.io/" target="_blank">CE-Nav</a>) are accepted by <strong>ICLR 2026</strong>.</span>
+                <span class="news-content" data-i18n-html="news.4">Two papers (<a href="https://astra-amap.github.io/omninav.github.io/" target="_blank">OmniNav</a>, <a href="https://ce-nav.github.io/" target="_blank">CE-Nav</a>) are accepted by <strong>ICLR 2026</strong>.</span>
             </li>
             <li>
                 <span class="news-date">[Mar. 2025]</span>
-                <span class="news-content">Promoted to <strong>Algorithm Expert</strong> at Alibaba.</span>
+                <span class="news-content" data-i18n-html="news.5">Promoted to <strong>Algorithm Expert</strong> at Alibaba.</span>
             </li>
             <li>
                 <span class="news-date">[Feb. 2025]</span>
-                <span class="news-content">One paper (<a href="https://c8241998.github.io/HumanRig/" target="_blank">HumanRig</a>) is accepted for <strong>highlight</strong> presentation by CVPR 2025.</span>
+                <span class="news-content" data-i18n-html="news.6">One paper (<a href="https://c8241998.github.io/HumanRig/" target="_blank">HumanRig</a>) is accepted for <strong>highlight</strong> presentation by CVPR 2025.</span>
             </li>
             <li>
                 <span class="news-date">[Mar. 2024]</span>
-                <span class="news-content">Promoted to Senior Algorithm Engineer at Alibaba.</span>
+                <span class="news-content" data-i18n="news.7">Promoted to Senior Algorithm Engineer at Alibaba.</span>
             </li>
             <li>
                 <span class="news-date">[May. 2022]</span>
-                <span class="news-content">I start working as an Algorithm Engineer at Alibaba.</span>
+                <span class="news-content" data-i18n="news.8">I start working as an Algorithm Engineer at Alibaba.</span>
             </li>
             <li>
                 <span class="news-date">[Apr. 2022]</span>
-                <span class="news-content">One paper (<a href="https://arxiv.org/abs/2207.05807" target="_blank">Dam Reservoir Extraction</a>) is accepted for publication by <strong>IEEE TGRS</strong>.</span>
+                <span class="news-content" data-i18n-html="news.9">One paper (<a href="https://arxiv.org/abs/2207.05807" target="_blank">Dam Reservoir Extraction</a>) is accepted for publication by <strong>IEEE TGRS</strong>.</span>
             </li>
             <li>
                 <span class="news-date">[Mar. 2022]</span>
-                <span class="news-content">One paper is accepted for publication by <strong>Energy Reports</strong>.</span>
+                <span class="news-content" data-i18n-html="news.10">One paper is accepted for publication by <strong>Energy Reports</strong>.</span>
             </li>
             <li>
                 <span class="news-date">[Dec. 2021]</span>
-                <span class="news-content">I receive MSc degree from University College London.</span>
+                <span class="news-content" data-i18n="news.11">I receive MSc degree from University College London.</span>
             </li>
             <li>
                 <span class="news-date">[Sep. 2021]</span>
-                <span class="news-content">One paper is accepted for <strong>oral</strong> presentation and publication by ICPE 2021.</span>
+                <span class="news-content" data-i18n-html="news.12">One paper is accepted for <strong>oral</strong> presentation and publication by ICPE 2021.</span>
             </li>
             <li>
                 <span class="news-date">[Feb. 2021]</span>
-                <span class="news-content">I start working as a Research Assistant at King's College London.</span>
+                <span class="news-content" data-i18n="news.13">I start working as a Research Assistant at King's College London.</span>
             </li>
             <li>
                 <span class="news-date">[Dec. 2020]</span>
-                <span class="news-content">My graduation thesis is awarded as <strong>'Excellent Graduation Thesis in Beijing'</strong>.</span>
+                <span class="news-content" data-i18n-html="news.14">My graduation thesis is awarded as <strong>'Excellent Graduation Thesis in Beijing'</strong>.</span>
             </li>
             <li>
                 <span class="news-date">[Aug. 2020]</span>
-                <span class="news-content">I am awarded as <strong>PPDE (PaddlePaddle Developer Expert)</strong> by Baidu.</span>
+                <span class="news-content" data-i18n-html="news.15">I am awarded as <strong>PPDE (PaddlePaddle Developer Expert)</strong> by Baidu.</span>
             </li>
             <li>
                 <span class="news-date">[Jun. 2020]</span>
-                <span class="news-content">I receive B.E. degree from Beijing Jiaotong University.</span>
+                <span class="news-content" data-i18n="news.16">I receive B.E. degree from Beijing Jiaotong University.</span>
             </li>
         </ul>
     </div>
@@ -691,26 +756,26 @@
 <!-- Experience -->
 <section id="experience" class="section">
     <div class="container">
-        <h2 class="section-title">Experience</h2>
+        <h2 class="section-title" data-i18n="section.experience">Experience</h2>
         <div class="timeline">
             <div class="timeline-item">
-                <h3>Alibaba AMAP</h3>
-                <div class="role">Algorithm Expert</div>
-                <div class="period">May 2022 &ndash; Present</div>
-                <div class="desc">Research on Embodied AI, Digital Human, and Digital Twin at the Visual Technology Center.</div>
+                <h3 data-i18n="exp.alibaba.name">Alibaba AMAP</h3>
+                <div class="role" data-i18n="exp.alibaba.role">Algorithm Expert</div>
+                <div class="period" data-i18n="exp.alibaba.period">May 2022 &ndash; Present</div>
+                <div class="desc" data-i18n="exp.alibaba.desc">Research on Embodied AI, Digital Human, and Digital Twin at the CV Lab.</div>
             </div>
             <div class="timeline-item">
-                <h3>King's College London</h3>
-                <div class="role">Research Assistant</div>
-                <div class="period">Feb. 2021 &ndash; Dec. 2021</div>
-                <div class="desc">Project: Remote sensing and machine learning to detect global dams and associated reservoirs.
+                <h3 data-i18n="exp.kcl.name">King's College London</h3>
+                <div class="role" data-i18n="exp.kcl.role">Research Assistant</div>
+                <div class="period" data-i18n="exp.kcl.period">Feb. 2021 &ndash; Dec. 2021</div>
+                <div class="desc" data-i18n="exp.kcl.desc">Project: Remote sensing and machine learning to detect global dams and associated reservoirs.
                     Working with Dr. Miaojing Shi, Dr. Arnout van Soesbergen, and Dr. Mark Mulligan.</div>
             </div>
             <div class="timeline-item">
-                <h3>Tsinghua University</h3>
-                <div class="role">Research Assistant</div>
-                <div class="period">Oct. 2019 &ndash; May 2020</div>
-                <div class="desc">Research on Temporal Action Detection algorithms and Gait Recognition algorithms.</div>
+                <h3 data-i18n="exp.thu.name">Tsinghua University</h3>
+                <div class="role" data-i18n="exp.thu.role">Research Assistant</div>
+                <div class="period" data-i18n="exp.thu.period">Oct. 2019 &ndash; May 2020</div>
+                <div class="desc" data-i18n="exp.thu.desc">Research on Temporal Action Detection algorithms and Gait Recognition algorithms.</div>
             </div>
         </div>
     </div>
@@ -719,8 +784,8 @@
 <!-- Publications -->
 <section id="publications" class="section pub-section">
     <div class="container">
-        <h2 class="section-title">Publications</h2>
-        <p class="pub-note">
+        <h2 class="section-title" data-i18n="section.publications">Publications</h2>
+        <p class="pub-note" data-i18n-html="pub.note">
             <span class="first-author-marker">*</span> denotes equal contribution &nbsp;|&nbsp;
             <sup>&dagger;</sup> corresponding author &nbsp;|&nbsp;
             <a href="https://scholar.google.com/citations?user=g60zAM4AAAAJ&hl=en" target="_blank">Full list on Google Scholar</a>
@@ -759,7 +824,7 @@
             <li class="pub-item">
                 <div class="pub-title"><a href="https://amap-cvlab.github.io/ABot-Navigation/ABot-N0/" target="_blank">ABot-N0: Technical Report on the VLA Foundation Model for Versatile Embodied Navigation</a></div>
                 <div class="pub-authors"><span class="me">Zedong Chu<sup>&dagger;</sup></span>, S. Xie, X. Wu, Y. Shen, M. Luo, Z. Wang, F. Liu, X. Leng, J. Hu, M. Yin, et al.</div>
-                <div class="pub-venue"><span class="venue-name">arXiv preprint</span>, 2026 <span class="pub-badge badge-first">First Author</span> <span class="pub-badge badge-corresponding">Corresponding Author</span></div>
+                <div class="pub-venue"><span class="venue-name">Technical Report</span>, 2026 <span class="pub-badge badge-first">First Author</span> <span class="pub-badge badge-corresponding">Corresponding Author</span></div>
                 <div class="pub-links">
                     <a href="https://arxiv.org/abs/2602.11598" target="_blank"><i class="fas fa-file-alt"></i> Paper</a>
                     <a href="https://amap-cvlab.github.io/ABot-Navigation/ABot-N0/" target="_blank"><i class="fas fa-globe"></i> Project</a>
@@ -858,7 +923,7 @@
             <!-- Dam Reservoir -->
             <li class="pub-item">
                 <div class="pub-title"><a href="https://arxiv.org/abs/2207.05807" target="_blank">Dam Reservoir Extraction from Remote Sensing Imagery Using Tailored Metric Learning Strategies</a></div>
-                <div class="pub-authors"><span class="me">Zedong Chu</span>, A. Van Soesbergen, M. Shi, M. Mulligan</div>
+                <div class="pub-authors"><span class="me">Zedong Chu</span><span class="first-author-marker">*</span>, A. Van Soesbergen<span class="first-author-marker">*</span>, M. Shi, M. Mulligan</div>
                 <div class="pub-venue">
                     <span class="venue-name">IEEE Transactions on Geoscience and Remote Sensing (TGRS)</span>, 2022
                     <span class="pub-badge badge-first">First Author</span>
@@ -873,7 +938,7 @@
             <li class="pub-item">
                 <div class="pub-title">Output Prediction of Alpha-type Stirling Engines Using Gradient Boosted Regression Trees and Corresponding Heat Recovery System Optimization Based on Improved NSGA-II</div>
                 <div class="pub-authors">J. Chen, <span class="me">Zedong Chu</span>, R. Zhao, A.F. Luo, K.H. Luo</div>
-                <div class="pub-venue"><span class="venue-name">Energy Reports</span>, 8, 835-846, 2022</div>
+                <div class="pub-venue"><span class="venue-name">Energy Reports</span>, 8, 835-846, 2022 &nbsp;|&nbsp; <span class="venue-name">ICPE 2021</span> <span class="pub-badge badge-oral">Oral</span></div>
             </li>
 
             <!-- Gait Recognition -->
@@ -891,7 +956,7 @@
 <!-- Footer -->
 <footer>
     <div class="container">
-        <p>&copy; 2026 Zedong Chu &nbsp;|&nbsp;
+        <p data-i18n-html="footer">&copy; 2026 Zedong Chu &nbsp;|&nbsp;
             <a href="mailto:569362884@qq.com">Email</a> &nbsp;|&nbsp;
             <a href="https://github.com/c8241998" target="_blank">GitHub</a> &nbsp;|&nbsp;
             <a href="https://scholar.google.com/citations?user=g60zAM4AAAAJ&hl=en" target="_blank">Google Scholar</a>
@@ -900,8 +965,105 @@
 </footer>
 
 <script>
+    const i18n = {
+        zh: {
+            'nav.about': '关于',
+            'nav.news': '动态',
+            'nav.experience': '经历',
+            'nav.publications': '论文',
+            'profile.title': '算法专家',
+            'profile.affiliation': '<a href="https://amap-cvlab.github.io/" target="_blank">高德地图 CV Lab</a>，北京',
+            'profile.bio': '我目前在北京阿里巴巴高德地图担任算法专家。此前，我在英国伦敦大学学院（UCL）电子与电气工程系取得理学硕士学位，导师为 <a href="https://profiles.ucl.ac.uk/55855-laura-toni/about" target="_blank">Dr. Laura Toni</a>。硕士之前，我在北京交通大学软件工程学院获得工学学士学位，导师为<a href="https://faculty.bjtu.edu.cn/rjxy/8947.html" target="_blank">张顺利老师</a>。',
+            'interest.embodied': '具身智能',
+            'interest.foundation': '基础模型',
+            'interest.human': '数字人',
+            'interest.cv': '计算机视觉',
+            'section.news': '动态',
+            'news.1': '<a href="https://amap-eai.github.io/SocialNav/" target="_blank"><span class="highlight">SocialNav</span></a> 入选 CVPR 2026 <strong>最佳论文候选</strong>！',
+            'news.2': '两篇论文（<a href="https://amap-eai.github.io/SocialNav/" target="_blank">SocialNav</a>、<a href="https://arxiv.org/abs/2512.01550" target="_blank">NavForesee</a>）被 <strong>CVPR 2026</strong> 接收。',
+            'news.3': '导航基础模型 <a href="https://amap-cvlab.github.io/ABot-Navigation/ABot-N0/" target="_blank"><strong>ABot-N0</strong></a> 技术报告发布。',
+            'news.4': '两篇论文（<a href="https://astra-amap.github.io/omninav.github.io/" target="_blank">OmniNav</a>、<a href="https://ce-nav.github.io/" target="_blank">CE-Nav</a>）被 <strong>ICLR 2026</strong> 接收。',
+            'news.5': '晋升为阿里巴巴<strong>算法专家</strong>。',
+            'news.6': '一篇论文（<a href="https://c8241998.github.io/HumanRig/" target="_blank">HumanRig</a>）被 CVPR 2025 接收为 <strong>Highlight</strong> 报告。',
+            'news.7': '晋升为阿里巴巴高级算法工程师。',
+            'news.8': '加入阿里巴巴，担任算法工程师。',
+            'news.9': '一篇论文（<a href="https://arxiv.org/abs/2207.05807" target="_blank">Dam Reservoir Extraction</a>）被 <strong>IEEE TGRS</strong> 接收发表。',
+            'news.10': '一篇论文被 <strong>Energy Reports</strong> 接收发表。',
+            'news.11': '获得伦敦大学学院硕士学位。',
+            'news.12': '一篇论文被 ICPE 2021 接收并进行<strong>口头报告</strong>。',
+            'news.13': '加入伦敦国王学院，担任研究助理。',
+            'news.14': '毕业论文被评为<strong>北京市优秀毕业论文</strong>。',
+            'news.15': '被百度授予 <strong>PPDE（飞桨开发者技术专家）</strong> 称号。',
+            'news.16': '获得北京交通大学工学学士学位。',
+            'section.experience': '经历',
+            'exp.alibaba.name': '阿里巴巴 高德地图',
+            'exp.alibaba.role': '算法专家',
+            'exp.alibaba.period': '2022年5月 至今',
+            'exp.alibaba.desc': '在 CV Lab 从事具身智能、数字人与数字孪生方向的研究。',
+            'exp.kcl.name': '伦敦国王学院',
+            'exp.kcl.role': '研究助理',
+            'exp.kcl.period': '2021年2月 – 2021年12月',
+            'exp.kcl.desc': '项目：基于遥感与机器学习的全球大坝及水库检测。与 Dr. Miaojing Shi、Dr. Arnout van Soesbergen 和 Dr. Mark Mulligan 合作。',
+            'exp.thu.name': '清华大学',
+            'exp.thu.role': '研究助理',
+            'exp.thu.period': '2019年10月 – 2020年5月',
+            'exp.thu.desc': '从事时序动作检测算法与步态识别算法的研究。',
+            'section.publications': '论文发表',
+            'pub.note': '<span class="first-author-marker">*</span> 共同贡献 &nbsp;|&nbsp; <sup>&dagger;</sup> 通讯作者 &nbsp;|&nbsp; <a href="https://scholar.google.com/citations?user=g60zAM4AAAAJ&hl=en" target="_blank">Google Scholar 完整列表</a>',
+            'footer': '&copy; 2026 储泽栋 &nbsp;|&nbsp; <a href="mailto:569362884@qq.com">邮箱</a> &nbsp;|&nbsp; <a href="https://github.com/c8241998" target="_blank">GitHub</a> &nbsp;|&nbsp; <a href="https://scholar.google.com/citations?user=g60zAM4AAAAJ&hl=en" target="_blank">Google Scholar</a>'
+        }
+    };
+
+    const enCache = {};
+
+    function toggleLang() {
+        const html = document.documentElement;
+        const isEn = html.getAttribute('lang') === 'en';
+        const newLang = isEn ? 'zh' : 'en';
+        html.setAttribute('lang', newLang);
+        document.getElementById('lang-en').classList.toggle('active', newLang === 'en');
+        document.getElementById('lang-zh').classList.toggle('active', newLang === 'zh');
+        applyLang(newLang);
+        localStorage.setItem('lang', newLang);
+    }
+
+    function applyLang(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            if (lang === 'zh' && i18n.zh[key]) {
+                if (!enCache[key]) enCache[key] = el.innerHTML;
+                el.textContent = i18n.zh[key];
+            } else if (enCache[key]) {
+                el.innerHTML = enCache[key];
+            }
+        });
+        document.querySelectorAll('[data-i18n-html]').forEach(el => {
+            const key = el.getAttribute('data-i18n-html');
+            if (lang === 'zh' && i18n.zh[key]) {
+                if (!enCache[key]) enCache[key] = el.innerHTML;
+                el.innerHTML = i18n.zh[key];
+            } else if (enCache[key]) {
+                el.innerHTML = enCache[key];
+            }
+        });
+    }
+
+    (function() {
+        const saved = localStorage.getItem('lang');
+        if (saved === 'zh') {
+            document.documentElement.setAttribute('lang', 'zh');
+            document.getElementById('lang-en').classList.remove('active');
+            document.getElementById('lang-zh').classList.add('active');
+            applyLang('zh');
+        }
+    })();
+
     document.querySelectorAll('nav a').forEach(link => {
         link.addEventListener('click', () => {
             document.querySelector('nav').classList.remove('active');
         });
-  
+    });
+</script>
+
+</body>
+</html>
